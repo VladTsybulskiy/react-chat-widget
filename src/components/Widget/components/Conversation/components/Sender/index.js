@@ -9,7 +9,7 @@ import './style.scss';
 const Sender = ({ sendMessage, placeholder, disabledInput, autofocus, uploadImage }) =>
   <form className="rcw-sender" onSubmit={sendMessage}>
     <input type="text" className="rcw-new-message" name="message" placeholder={placeholder} disabled={disabledInput} autoFocus={autofocus} autoComplete="off" />
-    <div className="rcw-send">
+    <div className="rcw-upload">
       <input
         style={{ display: "none" }}
         accept="image/*"
