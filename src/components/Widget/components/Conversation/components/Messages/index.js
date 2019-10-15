@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { hideAvatar } from '@actions';
 
 import './styles.scss';
+import ImageContainer from '../ImageContainer';
 
 const scrollToBottom = () => {
   const messagesDiv = document.getElementById('messages');
@@ -40,16 +41,23 @@ class Messages extends Component {
   render() {
     const { messages, profileAvatar } = this.props;
     return (
-      <div id="messages" className="rcw-messages-container">
-        {messages.map((message, index) =>
-          <div className="rcw-message" key={index}>
-            {profileAvatar &&
-              message.get('showAvatar') &&
-              <img src={profileAvatar} className="rcw-avatar" alt="profile" />
-            }
-            {this.getComponentToRender(message)}
-          </div>
-        )}
+      <div className="root">
+        <div id="messages" className="rcw-messages-container">
+          {messages.map((message, index) => (
+            <div className="rcw-message" key={index}>
+              {profileAvatar &&
+                message.get('showAvatar') &&
+                <img src={profileAvatar} className="rcw-avatar" alt="profile" />
+              }
+              {this.getComponentToRender(message)}
+            </div>
+          ))}
+        </div>
+        {
+          this.props.uploadedFile?
+          <ImageContainer image={this.props.uploadedFile} deleteImage={this.props.deleteImage}/>:
+          null
+        }
       </div>
     );
   }

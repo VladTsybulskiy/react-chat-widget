@@ -11,6 +11,7 @@ configure({ adapter: new Adapter() });
 describe('<Widget />', () => {
   const profile = assetMock;
   const handleUserMessage = jest.fn();
+  const handleDeleteImage = jest.fn();
   const newMessageEvent = {
     target: {
       message: {
@@ -26,6 +27,7 @@ describe('<Widget />', () => {
       handleNewUserMessage={handleUserMessage}
       profileAvatar={profile}
       dispatch={dispatch}
+      handleDeleteImage={handleDeleteImage}
     />
   );
 

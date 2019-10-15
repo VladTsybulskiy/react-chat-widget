@@ -25,6 +25,8 @@ const WidgetLayout = props => (
         disabledInput={props.disabledInput}
         autofocus={props.autofocus}
         titleAvatar={props.titleAvatar}
+        uploadImage={props.uploadImage}
+        deleteImage={props.deleteImage}
       />
     }
     {props.customLauncher ?
@@ -44,6 +46,8 @@ WidgetLayout.propTypes = {
   subtitle: PropTypes.string,
   onSendMessage: PropTypes.func,
   onToggleConversation: PropTypes.func,
+  uploadImage: PropTypes.func,
+  deleteImage: PropTypes.func,
   showChat: PropTypes.bool,
   senderPlaceHolder: PropTypes.string,
   profileAvatar: PropTypes.string,

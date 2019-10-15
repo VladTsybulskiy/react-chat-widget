@@ -32,3 +32,11 @@ export function dropMessages() {
 export function isWidgetOpened() {
   return store.getState().behavior.get('showChat');
 }
+
+export function uploadImage(image) {
+  store.dispatch(actions.uploadImageAction(image));
+}
+
+export function deleteImage() {
+  store.dispatch(actions.deleteImageAction())
+}

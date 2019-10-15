@@ -1,6 +1,12 @@
 @import 'variables.scss';
 @import 'common.scss';
 
+.root {
+  height: 410px;
+  display: flex;
+  flex-direction: column
+}
+
 .rcw-messages-container {
   background-color: $white;
   height: 50vh;

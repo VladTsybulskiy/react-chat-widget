@@ -53,3 +53,15 @@ export function hideAvatar() {
     type: actions.HIDE_AVATAR
   };
 }
+export function uploadImageAction(image) {
+  return {
+    type: actions.UPLOAD_IMAGE,
+    image,
+  }
+}
+
+export function deleteImageAction() {
+  return {
+    type: actions.DELETE_IMAGE,
+  }
+}

@@ -20,16 +20,27 @@
     outline: none;
   }
 }
+.rcw-upload {
+  background: $grey-2;
+  border: 0;
+  cursor: pointer;
+  .rcw-upload-icon {
+    height: 25px;
+  }
+}
 
 .rcw-send {
   background: $grey-2;
   border: 0;
-
+  cursor: pointer;
   .rcw-send-icon {
     height: 25px;
   }
 }
 
+.upload-container {
+  height: 45px;
+}
 @media screen and (max-width: 800px)  {
   .rcw-sender {
     border-radius: 0;
