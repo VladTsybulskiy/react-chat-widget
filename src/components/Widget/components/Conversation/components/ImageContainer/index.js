@@ -7,7 +7,7 @@ export default class ImageContainer extends Component {
       <div className="rcw-image-container">
         <div className="uploaded-image">
           <span className="close" onClick={() => this.props.deleteImage()}>&times;</span>
-          <img src={this.props.image} className="rcw-image-container-uploaded-image" alt="image" />
+          <img src={this.props.image.dataURL} className="rcw-image-container-uploaded-image" alt="image" />
         </div>
       </div>
     )

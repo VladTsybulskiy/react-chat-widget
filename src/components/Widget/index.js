@@ -40,12 +40,13 @@ class Widget extends Component {
   uploadImage = (event) => {
     var input = event.target;
     var reader = new FileReader();
-    reader.onload = this.readOnLoad();
+    reader.onload = this.readOnLoad(input.files[0]);
     reader.readAsDataURL(input.files[0]);
   };
 
-  readOnLoad = () => (e) => {
-    this.props.dispatch(uploadImageAction(e.target.result));
+  readOnLoad = (file) => (e) => {
+    file.dataURL = e.target.result;
+    this.props.dispatch(uploadImageAction(file));
   };
 
   render() {
