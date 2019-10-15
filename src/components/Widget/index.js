@@ -25,9 +25,9 @@ class Widget extends Component {
       if(this.props.addUserMessage) {
         this.props.dispatch(addUserMessage(userInput));
       }
-        message.image = this.props.uploadedFile?this.props.uploadedFile: null;
+        message.image = this.props.uploadedFile?this.props.uploadedFile: "";
         this.deleteImage();
-        message.text = userInput?userInput: null
+        message.text = userInput?userInput: "";
       this.props.handleNewUserMessage(message.text, message.image);
     }
     event.target.message.value = '';
