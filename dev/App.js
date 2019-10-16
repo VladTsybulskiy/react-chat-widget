@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Widget, addResponseMessage } from '../index';
+import { Widget, addResponseMessage, addUserMessage } from '../index';
 
 export default class App extends Component {
   componentDidMount() {
@@ -7,7 +7,7 @@ export default class App extends Component {
   }
 
   handleNewUserMessage = (newMessage) => {
-    addResponseMessage(newMessage);
+    addUserMessage(newMessage);
   }
 
   render() {
