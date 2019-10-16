@@ -214,6 +214,7 @@ In order to add new messages, you are provided with the following methods:
     - component: Component to be render,
     - props: props the component needs,
     - showAvatar: boolean, default value: false; the component will be rendered with the avatar like the messages
+    - entity: string, "client": if you send message, "response": if you get message
   - Method to render a custom component inse the messages container. With this method, you can add whatever component you need the widget to have.
 
 **Markdown is supported for the responses and user messages.**
