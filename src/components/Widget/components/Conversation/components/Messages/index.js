@@ -24,11 +24,10 @@ class Messages extends Component {
 
   getComponentToRender = message => {
     const ComponentToRender = message.get('component');
-    console.log(message.get('props'));
     if (message.get('type') === 'component') {
       return <ComponentToRender
       {...message.get('props')}
-      {...message.get('entity')}
+      {...message.get('sender')}
       />;
     }
     return <ComponentToRender message={message} />;
