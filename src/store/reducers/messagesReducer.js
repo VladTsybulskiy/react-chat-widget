@@ -18,8 +18,8 @@ const messagesReducer = {
   [actionTypes.ADD_NEW_LINK_SNIPPET]: (state, { link }) =>
     state.push(createLinkSnippet(link, MESSAGE_SENDER.RESPONSE)),
 
-  [actionTypes.ADD_COMPONENT_MESSAGE]: (state, { component, props, showAvatar }) =>
-    state.push(createComponentMessage(component, props, showAvatar)),
+  [actionTypes.ADD_COMPONENT_MESSAGE]: (state, { component, props, showAvatar, entity }) =>
+    state.push(createComponentMessage(component, props, showAvatar, entity)),
 
   [actionTypes.DROP_MESSAGES]: () => List([]),
 

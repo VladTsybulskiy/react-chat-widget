@@ -26,12 +26,12 @@ export function createLinkSnippet(link) {
   });
 }
 
-export function createComponentMessage(component, props, showAvatar) {
+export function createComponentMessage(component, props, showAvatar, entity) {
   return Map({
     type: MESSAGES_TYPES.CUSTOM_COMPONENT,
     component,
     props,
-    sender: MESSAGE_SENDER.RESPONSE,
+    sender: entity === "client"? MESSAGE_SENDER.RESPONSE: MESSAGE_SENDER.CLIENT,
     showAvatar
   });
 }

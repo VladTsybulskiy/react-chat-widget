@@ -33,12 +33,13 @@ export function addLinkSnippet(link) {
   };
 }
 
-export function renderCustomComponent(component, props, showAvatar) {
+export function renderCustomComponent(component, props, showAvatar, entity) {
   return {
     type: actions.ADD_COMPONENT_MESSAGE,
     component,
     props,
-    showAvatar
+    showAvatar,
+    entity
   };
 }
 

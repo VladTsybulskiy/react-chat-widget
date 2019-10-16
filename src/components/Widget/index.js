@@ -76,8 +76,6 @@ Widget.propTypes = {
   titleAvatar: PropTypes.string,
   subtitle: PropTypes.string,
   handleNewUserMessage: PropTypes.func.isRequired,
-  // handleUploadImage: PropTypes.func.isRequired,
-  // handleDeleteImage: PropTypes.func.isRequired,
   addUserMessage: PropTypes.bool,
   senderPlaceHolder: PropTypes.string,
   profileAvatar: PropTypes.string,
