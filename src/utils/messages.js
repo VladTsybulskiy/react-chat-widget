@@ -31,7 +31,7 @@ export function createComponentMessage(component, props, showAvatar, entity) {
     type: MESSAGES_TYPES.CUSTOM_COMPONENT,
     component,
     props,
-    sender: entity === "client"? MESSAGE_SENDER.CLIENT: MESSAGE_SENDER.RESPONSE,
+    sender: MESSAGE_SENDER.RESPONSE,
     showAvatar
   });
 }
