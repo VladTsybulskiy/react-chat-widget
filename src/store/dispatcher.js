@@ -13,8 +13,12 @@ export function addLinkSnippet(link) {
   store.dispatch(actions.addLinkSnippet(link));
 }
 
-export function renderCustomComponent(component, props, showAvatar = false, entity) {
-  store.dispatch(actions.renderCustomComponent(component, props, showAvatar, entity));
+export function renderClientCustomComponent(component, props, showAvatar = false) {
+  store.dispatch(actions.renderClientCustomComponent(component, props, showAvatar));
+}
+
+export function renderResponseCustomComponent(component, props, showAvatar = false, ) {
+  store.dispatch(actions.renderResponseCustomComponent(component, props, showAvatar, ));
 }
 
 export function toggleWidget() {

@@ -10,7 +10,7 @@ export function createNewMessage(text, sender) {
     component: Message,
     text,
     sender,
-    showAvatar: sender === MESSAGE_SENDER.RESPONSE
+    showAvatar: sender === MESSAGE_SENDER.RESPONSE,
   });
 }
 
@@ -22,16 +22,16 @@ export function createLinkSnippet(link) {
     link: link.link,
     target: link.target || '_blank',
     sender: MESSAGE_SENDER.RESPONSE,
-    showAvatar: true
+    showAvatar: true,
   });
 }
 
-export function createComponentMessage(component, props, showAvatar, entity) {
+export function createComponentMessage(component, props, showAvatar, sender) {
   return Map({
     type: MESSAGES_TYPES.CUSTOM_COMPONENT,
     component,
     props,
-    sender: MESSAGE_SENDER.CLIENT,
-    showAvatar
+    showAvatar,
+    sender,
   });
 }
