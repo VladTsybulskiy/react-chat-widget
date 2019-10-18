@@ -22,9 +22,6 @@ class Widget extends Component {
     const userInput = event.target.message.value;
     if (userInput || this.props.uploadedFile) {
       const message = {};
-      if(this.props.addUserMessage) {
-        this.props.dispatch(addUserMessage(userInput));
-      }
         message.image = this.props.uploadedFile?this.props.uploadedFile: "";
         this.deleteImage();
         message.text = userInput?userInput: "";
